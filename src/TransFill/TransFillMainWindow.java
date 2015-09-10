@@ -128,7 +128,7 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         jTAToolDataArea.setDragEnabled(true);
         jScrollPane3.setViewportView(jTAToolDataArea);
 
-        jBtnChangeTool.setText("Ändra verktyg");
+        jBtnChangeTool.setText("Bygg planlista");
         jBtnChangeTool.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnChangeToolActionPerformed(evt);
@@ -269,6 +269,7 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jMIBuildTreeFromToolProgramActionPerformed
 
     private void jBtnChangeToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnChangeToolActionPerformed
+        fz12Program.analyseMainProgram();
     }//GEN-LAST:event_jBtnChangeToolActionPerformed
 
     private void jMISaveArcFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMISaveArcFileActionPerformed

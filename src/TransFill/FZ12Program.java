@@ -14,6 +14,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -40,9 +41,11 @@ public class FZ12Program {
     }
 
     private void buildUsedPlaneListMainProgram() {
-        Pattern p = Pattern.compile("CYCLE800.+?KOPF_TISCH(.+)6,_");
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Pattern p = Pattern.compile("CYCLE800.+?KOPF_TISCH(?:.*,){6}(\\d+)");
+        Matcher m = p.matcher(entireProgram);
+        while ( m.find() ) {
+            System.out.println(m.group());
+        }
     }
 
     public class FormatException extends Exception {
