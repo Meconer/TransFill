@@ -28,7 +28,6 @@ import javax.swing.tree.TreePath;
 public class TransFillMainWindow extends javax.swing.JFrame {
 
     private final FZ12Program fz12Program;
-    private final ToolData toolData;
     
     
     /**
@@ -44,12 +43,6 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         jTAProgramArea.setDragEnabled(true);
         jTAProgramArea.setTransferHandler( fz12TransferHandler );
 
-        ToolDataTransferHandler toolDataTransferHandler = new ToolDataTransferHandler();
-        toolData = new ToolData();
-        toolData.setToolTextArea(jTAToolDataArea);
-        toolDataTransferHandler.setToolData(toolData);
-        jTAToolDataArea.setDragEnabled( true );
-        jTAToolDataArea.setTransferHandler( toolDataTransferHandler );
         
     }
 
@@ -84,38 +77,7 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTAToolDataArea = new javax.swing.JTextArea();
-        jSPC100Tree = new javax.swing.JScrollPane();
-        jTreeC100 = new javax.swing.JTree();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
         jBtnChangeTool = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jTfId = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jTfType = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTfDNo = new javax.swing.JTextField();
-        jTfSl = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTfQValue = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTfLValue = new javax.swing.JTextField();
-        jTfHValue = new javax.swing.JTextField();
-        jTfRValue = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTfQOfsValue = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jTfLOfsValue = new javax.swing.JTextField();
-        jTfHOfsValue = new javax.swing.JTextField();
-        jTfROfsValue = new javax.swing.JTextField();
-        jBtnDeleteTool = new javax.swing.JButton();
-        jBtnAddTool = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jBtnFillInMeasuredTools = new javax.swing.JButton();
-        jBtnAddStandardTools = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuArkiv = new javax.swing.JMenu();
         jMIReadArcFile = new javax.swing.JMenuItem();
@@ -145,7 +107,7 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTAProgramArea);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("Arcfil");
+        jLabel1.setText("Program");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -159,95 +121,12 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         );
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Inmätta verktyg");
+        jLabel3.setText("Planlista");
 
         jTAToolDataArea.setColumns(20);
         jTAToolDataArea.setRows(5);
         jTAToolDataArea.setDragEnabled(true);
         jScrollPane3.setViewportView(jTAToolDataArea);
-
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("C100");
-        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Revolver 1");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 1");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 2");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 3");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 4");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 5");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 6");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 7");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 8");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 9");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 10");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Revolver 2");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 1");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 2");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 3");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 4");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 5");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 6");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 7");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 8");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 9");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 10");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Revolver 3");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 1");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 2");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 3");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 4");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 5");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 6");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 7");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 8");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 9");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Plats 10");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        jTreeC100.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jTreeC100.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTreeC100MouseClicked(evt);
-            }
-        });
-        jTreeC100.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
-            public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
-                jTreeC100ValueChanged(evt);
-            }
-        });
-        jSPC100Tree.setViewportView(jTreeC100);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Verktygsträd");
 
         jBtnChangeTool.setText("Ändra verktyg");
         jBtnChangeTool.addActionListener(new java.awt.event.ActionListener() {
@@ -255,229 +134,6 @@ public class TransFillMainWindow extends javax.swing.JFrame {
                 jBtnChangeToolActionPerformed(evt);
             }
         });
-
-        jLabel2.setText("ID:");
-
-        jTfId.setEditable(false);
-        jTfId.setBackground(new java.awt.Color(204, 204, 204));
-        jTfId.setFocusable(false);
-
-        jLabel5.setText("Typ:");
-
-        jTfType.setEditable(false);
-        jTfType.setBackground(new java.awt.Color(204, 204, 204));
-        jTfType.setFocusable(false);
-
-        jLabel6.setText("D nr:");
-
-        jTfDNo.setEditable(false);
-        jTfDNo.setBackground(new java.awt.Color(204, 204, 204));
-        jTfDNo.setFocusable(false);
-
-        jTfSl.setEditable(false);
-        jTfSl.setBackground(new java.awt.Color(204, 204, 204));
-        jTfSl.setFocusable(false);
-
-        jLabel7.setText("SL:");
-
-        jTfQValue.setEditable(false);
-        jTfQValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfQValue.setFocusable(false);
-
-        jLabel8.setText("Q:");
-
-        jTfLValue.setEditable(false);
-        jTfLValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfLValue.setFocusable(false);
-
-        jTfHValue.setEditable(false);
-        jTfHValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfHValue.setFocusable(false);
-
-        jTfRValue.setEditable(false);
-        jTfRValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfRValue.setFocusable(false);
-
-        jLabel9.setText("L:");
-
-        jLabel10.setText("H:");
-
-        jLabel11.setText("R:");
-
-        jTfQOfsValue.setEditable(false);
-        jTfQOfsValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfQOfsValue.setFocusable(false);
-
-        jLabel12.setText("Geometri");
-
-        jLabel13.setText("Förslitning");
-
-        jTfLOfsValue.setEditable(false);
-        jTfLOfsValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfLOfsValue.setFocusable(false);
-
-        jTfHOfsValue.setEditable(false);
-        jTfHOfsValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfHOfsValue.setFocusable(false);
-
-        jTfROfsValue.setEditable(false);
-        jTfROfsValue.setBackground(new java.awt.Color(204, 204, 204));
-        jTfROfsValue.setFocusable(false);
-
-        jBtnDeleteTool.setText("Radera verktyg");
-        jBtnDeleteTool.setEnabled(false);
-        jBtnDeleteTool.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnDeleteToolActionPerformed(evt);
-            }
-        });
-
-        jBtnAddTool.setText("Lägg till verktyg");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jBtnChangeTool)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnDeleteTool)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtnAddTool)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTfRValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTfROfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTfQValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel12))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13)
-                                            .addComponent(jTfQOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTfLValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTfLOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTfHValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTfHOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTfId, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTfDNo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTfSl, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(230, 230, 230))))))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnChangeTool)
-                    .addComponent(jBtnDeleteTool)
-                    .addComponent(jBtnAddTool))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTfType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTfDNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfSl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13))
-                .addGap(4, 4, 4)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfQValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTfQOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfLValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(jTfLOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfHValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jTfHOfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTfRValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jTfROfsValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        jBtnFillInMeasuredTools.setText("<< Fyll i från inmätta verktyg");
-        jBtnFillInMeasuredTools.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnFillInMeasuredToolsActionPerformed(evt);
-            }
-        });
-
-        jBtnAddStandardTools.setText("Lägg till standardverktyg");
-        jBtnAddStandardTools.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnAddStandardToolsActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jBtnAddStandardTools, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jBtnFillInMeasuredTools, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE))
-                .addContainerGap(208, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jBtnFillInMeasuredTools)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBtnAddStandardTools)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         jMenuArkiv.setText("Arkiv");
 
@@ -570,31 +226,16 @@ public class TransFillMainWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(360, 360, 360)))
+                    .addComponent(jBtnChangeTool)
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jSPC100Tree))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3))
-                        .addGap(28, 28, 28))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jLabel3)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 665, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -602,19 +243,15 @@ public class TransFillMainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jSPC100Tree, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)
                     .addComponent(jScrollPane3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(14, 14, 14)
+                .addComponent(jBtnChangeTool)
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
         pack();
@@ -629,37 +266,10 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jMIBuildTreeFromMainProgramActionPerformed
 
     private void jMIBuildTreeFromToolProgramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBuildTreeFromToolProgramActionPerformed
-        analyseToolProgramInArcFile();
     }//GEN-LAST:event_jMIBuildTreeFromToolProgramActionPerformed
 
-    private void jTreeC100ValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_jTreeC100ValueChanged
-        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) jTreeC100.getLastSelectedPathComponent();
-        // Finns noden?
-        if ( selectedNode != null ) {
-            // Är det lägsta nivån, dvs ett verktyg?
-            if ( selectedNode.isLeaf() ) {
-                // Kontrollera att det inte är ett tomt träd med "Plats xx", dvs en sträng istället för ett Tool-objekt.
-                if ( !selectedNode.getUserObject().getClass().equals(String.class)) {
-                    Tool toolAtSelectedNode = (Tool) selectedNode.getUserObject();
-                    setTextFields( toolAtSelectedNode );
-                }
-                jBtnDeleteTool.setEnabled(true);
-            } else {
-                clearTextFields();
-                jBtnDeleteTool.setEnabled(false);
-            }
-        }
-    }//GEN-LAST:event_jTreeC100ValueChanged
-
     private void jBtnChangeToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnChangeToolActionPerformed
-        TreePath treePath = jTreeC100.getSelectionPath();
-        changeSelectedTool();
-        jTreeC100.setSelectionPath(treePath);
     }//GEN-LAST:event_jBtnChangeToolActionPerformed
-
-    private void jBtnFillInMeasuredToolsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnFillInMeasuredToolsActionPerformed
-        fillInValuesFromMeasuredTools();
-    }//GEN-LAST:event_jBtnFillInMeasuredToolsActionPerformed
 
     private void jMISaveArcFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMISaveArcFileActionPerformed
         saveArcFile();
@@ -670,7 +280,6 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jMIEnterToolTreeInArcFileActionPerformed
 
     private void jMIBuildOdsToolListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBuildOdsToolListActionPerformed
-        createOdsToolList();
     }//GEN-LAST:event_jMIBuildOdsToolListActionPerformed
 
     private void jMiSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMiSettingsActionPerformed
@@ -682,21 +291,6 @@ public class TransFillMainWindow extends javax.swing.JFrame {
         aboutDialog.setBuildNr( getRbTok("BUILD") );
         aboutDialog.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
-
-    private void jTreeC100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTreeC100MouseClicked
-        if ( evt.getButton() == evt.BUTTON3 ) {
-            // Right clicked. Show popup menu
-            showTreeRightClickMenu( evt.getX(), evt.getY());
-        }
-    }//GEN-LAST:event_jTreeC100MouseClicked
-
-    private void jBtnDeleteToolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDeleteToolActionPerformed
-        //deleteSelectedTool();
-    }//GEN-LAST:event_jBtnDeleteToolActionPerformed
-
-    private void jBtnAddStandardToolsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAddStandardToolsActionPerformed
-        // addStandardTools();
-    }//GEN-LAST:event_jBtnAddStandardToolsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -736,24 +330,9 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnAddStandardTools;
-    private javax.swing.JButton jBtnAddTool;
     private javax.swing.JButton jBtnChangeTool;
-    private javax.swing.JButton jBtnDeleteTool;
-    private javax.swing.JButton jBtnFillInMeasuredTools;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMIBuildOdsToolList;
     private javax.swing.JMenuItem jMIBuildTreeFromMainProgram;
     private javax.swing.JMenuItem jMIBuildTreeFromMeasuredTools;
@@ -768,11 +347,8 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jMenuTools;
     private javax.swing.JMenuItem jMiSettings;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JScrollPane jSPC100Tree;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPopupMenu.Separator jSeparator1;
@@ -780,19 +356,6 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JTextArea jTAProgramArea;
     private javax.swing.JTextArea jTAToolDataArea;
-    private javax.swing.JTextField jTfDNo;
-    private javax.swing.JTextField jTfHOfsValue;
-    private javax.swing.JTextField jTfHValue;
-    private javax.swing.JTextField jTfId;
-    private javax.swing.JTextField jTfLOfsValue;
-    private javax.swing.JTextField jTfLValue;
-    private javax.swing.JTextField jTfQOfsValue;
-    private javax.swing.JTextField jTfQValue;
-    private javax.swing.JTextField jTfROfsValue;
-    private javax.swing.JTextField jTfRValue;
-    private javax.swing.JTextField jTfSl;
-    private javax.swing.JTextField jTfType;
-    private javax.swing.JTree jTreeC100;
     // End of variables declaration//GEN-END:variables
 
     private void readFZ12Program() {
@@ -817,144 +380,17 @@ public class TransFillMainWindow extends javax.swing.JFrame {
     private void analyseFZ12Program() {
         if ( fz12Program != null ) {
             fz12Program.analyseMainProgram();
-            refreshTree(jTreeC100);
         }
-    }
-
-    private void analyseToolProgramInArcFile() {
-        if ( fz12Program != null ) {
-            refreshTree( jTreeC100 );
-        }
-    }
-
-    private void changeSelectedTool() {
-        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) jTreeC100.getLastSelectedPathComponent();
-        if ( selectedNode != null ) {
-            if (selectedNode.isLeaf() ) {
-                if ( !selectedNode.getUserObject().getClass().equals(String.class)) {
-                    Tool tool = ( Tool ) selectedNode.getUserObject();
-                    tool.openChangeToolDialog(this);
-                    refreshTree( jTreeC100 );
-                }
-            }
-        }
-    }
-
-    private void refreshTree(JTree jTreeC100) {
-        DefaultTreeModel defaultTreeModel = (DefaultTreeModel) jTreeC100.getModel();
-        defaultTreeModel.reload();
-        for (int i = 0; i < jTreeC100.getRowCount(); i++) {
-            jTreeC100.expandRow(i);
-        }
-
-
-    }
-
-    private void setTextFields(Tool toolAtSelectedNode) {
-        jTfId.setText(toolAtSelectedNode.getId());
-        jTfType.setText( Integer.toString( toolAtSelectedNode.getType() ) );
-        jTfDNo.setText( Integer.toString( toolAtSelectedNode.getdNo() ) );
-        jTfSl.setText( Integer.toString( toolAtSelectedNode.getSlValue() ) );
-        jTfQValue.setText( toolAtSelectedNode.getqValue() );
-        jTfLValue.setText( toolAtSelectedNode.getlValue() );
-        jTfRValue.setText( toolAtSelectedNode.getrValue() );
-        jTfHValue.setText( toolAtSelectedNode.gethValue() );
-        jTfQOfsValue.setText( toolAtSelectedNode.getQ_ofs() );
-        jTfLOfsValue.setText( toolAtSelectedNode.getL_ofs() );
-        jTfROfsValue.setText( toolAtSelectedNode.getR_ofs() );
-        jTfHOfsValue.setText( toolAtSelectedNode.getH_ofs() );
-        
-    }
-
-    private void clearTextFields() {
-        jTfId.setText( "" );
-        jTfType.setText( "" );
-        jTfDNo.setText( "" );
-        jTfSl.setText( "" );
-        jTfQValue.setText( "" );
-        jTfLValue.setText( "" );
-        jTfRValue.setText( "" );
-        jTfHValue.setText( "" );
-        jTfQOfsValue.setText( "" );
-        jTfLOfsValue.setText( "" );
-        jTfROfsValue.setText( "" );
-        jTfHOfsValue.setText( "" );
-        
-    }
-
-    private void fillInValuesFromMeasuredTools() {
-        
-        Iterator<MeasuredTool> measuredToolListIterator = toolData.getIterator();
-        
-        while ( measuredToolListIterator.hasNext() ) {
-            MeasuredTool mTool = measuredToolListIterator.next();
-            Tool toolToChange = findToolByDNo( jTreeC100, mTool.getdNo() );
-            if ( toolToChange != null ) {
-                toolToChange.setSlValue( mTool.getsL() );
-                toolToChange.setqValue( mTool.getqVal() );
-                toolToChange.setlValue( mTool.getlVal() );
-                toolToChange.setrValue( mTool.getrVal() );
-                toolToChange.setType( mTool.getToolType() );
-                toolToChange.setQ_ofs( "" );
-                toolToChange.setL_ofs( "" );
-                toolToChange.setH_ofs( "" );
-                toolToChange.setR_ofs( "" );
-            }
-        }
-        
-        refreshTree(jTreeC100);
-        clearTextFields();
-        
-    }
-
-    private Tool findToolByDNo(JTree jTreeC100, int dNo) {
-        DefaultMutableTreeNode treeNode = (DefaultMutableTreeNode) jTreeC100.getModel().getRoot();
-        Enumeration treeEnumeration = treeNode.postorderEnumeration();
-        while ( treeEnumeration.hasMoreElements() ) {
-            DefaultMutableTreeNode node = (DefaultMutableTreeNode) treeEnumeration.nextElement();
-            if ( node.isLeaf() ) {
-                Tool tool = (Tool) node.getUserObject();
-                if ( tool.getdNo() == dNo ) return tool;
-            }
-        }
-        return null;
     }
 
     private void saveArcFile() {
         fz12Program.saveFile();
     }
 
-    private void createOdsToolList() {
-        File toolListFile;
-        JFileChooser fc = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter(
-            "ODS-filer", "ods");
-        fc.setFileFilter(filter);
-        
-        if ( fz12Program.hasFile() ) {
-            Path path = fz12Program.getCurrentDir();
-            path = Paths.get( path.toString() + "\\vlist.ods" );
-            toolListFile = path.toFile();
-            if ( toolListFile != null ) fc.setSelectedFile( toolListFile );
-        } else {
-            toolListFile = Paths.get("vlist.ods").toFile();
-            fc.setSelectedFile(toolListFile);
-        }
-        
-        int returnVal = fc.showOpenDialog(this);
-        if(returnVal == JFileChooser.APPROVE_OPTION) {
-            // fz12Program.createOdsToolList( toolListFile );
-        }
-
-    }
 
     private void showSettingsDialog() {
         TransFillPreferences c100Preferences = TransFillPreferences.getInstance();
         c100Preferences.showPrefDialog();
-    }
-
-    private void showTreeRightClickMenu(int x, int y) {
-        jPopupMenu1.show(jSPC100Tree, x, y );
     }
 
 
