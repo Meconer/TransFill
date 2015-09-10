@@ -6,7 +6,9 @@
 
 package TransFill;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -41,10 +43,21 @@ public class FZ12Program {
     }
 
     private void buildUsedPlaneListMainProgram() {
-        Pattern p = Pattern.compile("CYCLE800.+?KOPF_TISCH(?:.*,){6}(\\d+)");
-        Matcher m = p.matcher(entireProgram);
-        while ( m.find() ) {
-            System.out.println(m.group());
+        StringReader reader = new StringReader(entireProgram);
+        BufferedReader br = new BufferedReader(reader);
+        String line;
+        try {
+            while((line=br.readLine())!=null)
+            {
+                if ( line.contains("TRANS")) {
+                    System.out.println(line);
+                }
+                if ( line.matches(".*A[0-9.]+.*B[0-9.]+")) {
+                    System.out.println(line);
+                }
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(FZ12Program.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
